@@ -1,0 +1,36 @@
+
+##### COMMON
+alias l="ls -l"
+alias ll="clear && ls -lha"
+
+###### GIT
+alias gt="git status"
+alias gstaged="git diff --cached"
+alias gstashlist="git stash list | cat"
+alias gbranch="git branch"
+alias gpullmaster="git pull origin master"
+alias gdiff="git diff"
+alias gadd="git add"
+alias ga="git add"
+alias gcheckout="git checkout"
+alias gc="git checkout"
+alias gpush="git push"
+alias gcommit="git commit -m "
+alias gpull="git pull"
+alias greset="git reset"
+alias gpop="git stash pop"
+alias gstash="git stash"
+
+###### VAGRANT
+
+alias vh="vagrant halt"
+alias vu="vagrant up"
+alias vgs="vagrant global-status"
+alias ssh-vagrant="vagrant ssh"
+
+###### PHP LARAVEL
+alias art="php artisan"
+alias artisan="php artisan"
+alias artisan-cc="php artisan optimize && php artisan clear-compiled"
+
+
