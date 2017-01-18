@@ -1,0 +1,7 @@
+[user]
+	name = Bruno Pereira
+	email = bruno9pereira@gmail.com
+[core]
+	editor = vim
+[push]
+	default = matching
