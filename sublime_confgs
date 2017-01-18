@@ -1,0 +1,16 @@
+{
+    color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+    "theme": "Material-Theme.sublime-theme",
+    "default_encoding": "UTF-8",
+    "fallback_encoding": "UTF-8",
+    "font_size": 10,
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "translate_tabs_to_spaces": true,
+    "tab_size": 4,
+    "ignored_packages": [
+        "Vintage"
+    ],
+    "save_on_focus_lost": true,
+    "show_encoding": true
+}
