@@ -21,6 +21,18 @@ alias greset="git reset"
 alias gpop="git stash pop"
 alias gstash="git stash"
 
+showstash(){
+  git stash show -p stash@{$1}
+}
+
+applystash(){
+  git stash apply stash@{$1}
+}
+
+dropstash(){
+  git stash drop stash@{$1}
+}
+
 ###### VAGRANT
 
 alias vh="vagrant halt"
