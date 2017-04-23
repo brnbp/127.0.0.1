@@ -46,4 +46,9 @@ alias art="php artisan"
 alias artisan="php artisan"
 alias artisan-cc="php artisan optimize && php artisan clear-compiled"
 
+##### PHPUnit
+alias p="phpunit"
+alias pu="phpunit"
+alias pf="phpunit --filter "
+
 
