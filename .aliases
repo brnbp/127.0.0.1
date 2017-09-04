@@ -22,6 +22,7 @@ alias greset="git reset"
 alias gpop="git stash pop"
 alias gstash="git stash"
 alias gunstage="git reset HEAD "
+alias gshow="git show"
 
 showstash(){
   git stash show -p stash@{$1}
