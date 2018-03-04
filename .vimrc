@@ -6,8 +6,9 @@ let mapleader = ','				"The default leader is \, but a comma is much better
 
 "----------Visuals---------"
 set number
+set relativenumber
 set t_CO=256					"use 256 colors.
-colorscheme atom-dark
+colorscheme desert
 
 
 "----------Search---------"
@@ -25,7 +26,7 @@ nmap <C-L> <C-W><C-L> 				"use ctrl + l to focus on right side splitted screen"
 
 
 "----------Mappings---------"
-nmap <Leader>ev :tabedit $MYVIMRC<cr>		"Make it easy to edit vimrc file
+nmap <Leader>ev :vsplit $MYVIMRC<cr>		"Make it easy to edit vimrc file
 nmap <Leader><space> :nohlsearch<cr>		"Remove highlight from search
 
 
