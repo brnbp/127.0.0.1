@@ -1,0 +1,9 @@
+{
+    "require": {
+        "laravel/installer": "^1.4",
+        "phpunit/phpunit": "^6.0",
+        "laravel/valet": "^2.0",
+        "friendsofphp/php-cs-fixer": "^2.3",
+        "hirak/prestissimo": "^0.3.7"
+    }
+}
