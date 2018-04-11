@@ -1,0 +1,15 @@
+#!/bin/bash
+
+domain='wttr.in'
+  
+if [ -n "$1" ]; then
+  city="$1"
+elif [ -n "$CITY" ]; then
+  city="$CITY"
+else
+  city=""
+fi
+
+city=$(printf "%s\n" "$city" | sed 's/ /%20/g')
+
+curl -s http://$domain/$city | less
