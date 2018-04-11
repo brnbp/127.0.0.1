@@ -1,0 +1,14 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# PHPStorm
+.idea
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Thumbnail cache files
+Thumbs.db
+
