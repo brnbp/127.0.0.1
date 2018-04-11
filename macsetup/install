@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+
+# --------------–-------–--------–--------–-------–--–-----
+# Homebrew
+# --------------–-------–--------–--------–-------–--–-----
+# Install Homebrew for package management, if not installed
+
+echo " → Installing Homebrew for package management..."
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update
+
+# Install all packages listed in the brewfile
+brew install $(cat brew/brewfile|grep -v "#")
+
+
+# --------------–-------–--------–--------–-------–
+# Applications
+# --------------–-------–--------–--------–-------–
+echo "→ Installing applications..."
+
+# Set up Cask, for Homebrew
+brew tap caskroom/cask
+
+# Set up Caskroom-versions, which allows apps' alternative versions, like Canary
+brew tap caskroom/versions
+
+# Install all apps listed in the caskfile
+brew cask install $(cat brew/caskfile|grep -v "#")
+
+mas search 'Spark' | head -n 1 | cut -f 1 -d ' ' |  xargs mas install
+mas search "lightshot Screenshot" | head -n 1 | cut -f 1 -d ' ' |  xargs mas install
+
+# --------------–-------–--------–--------–-------–
+# Setup project
+# --------------–-------–--------–--------–-------–
+echo "→ Setup projects..."
+
+mkdir -p ~/Code 
+
+
+# --------------–-------–--------–--------–-------–--–-----
+# dotfiles
+# --------------–-------–--------–--------–-------–--–-----
+
+mv ../.composer ~/
+mv ../.aliases ~/
+mv ../.gitconfig ~/
+mv ../.gitignore_global ~/
+mv ../.vimrc ~/
+mv ../.zshrc ~/
+mv ../.bin ~/
+
+
+# --------------–-------–--------–--------–-------–--–-----
+# NVM/Node
+# --------------–-------–--------–--------–-------–--–-----
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+
+# Install node
+nvm install stable
+
+# --------------–-------–--------–--------–-------–--–-----
+# Oh My Zsh
+# --------------–-------–--------–--------–-------–--–-----
+# install oh my zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+# set zsh as default shell
+sudo echo /usr/local/bin/zsh >> /etc/shells
+chsh -s /usr/local/bin/zsh
+
+
+# --------------–-------–--------–--------–-------–--–-----
+# System preferences
+# --------------–-------–--------–--------–-------–--–-----
+# It'll shut down Terminal!
+echo "→ Set macOS defaults... (It'll shut down Terminal!)"
+#sh macos

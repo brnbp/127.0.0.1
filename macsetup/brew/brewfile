@@ -1,0 +1,14 @@
+coreutils
+curl --with-ssl --with-libssh2
+findutils
+imagemagick --with-webp
+tree
+htop
+wget --with-iri
+youtube-dl
+nvm
+yarn
+ack
+composer
+zsh
+mas

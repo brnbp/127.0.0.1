@@ -1,0 +1,6 @@
+- install devtools
+    - sudo gem install lolcommits
+
+- macos configurations as such
+    - change the key binding 'command + q' to anything else (e.g. mission control > show desktop)
+    - iterm2 import configurations (preferences > general > last options)
