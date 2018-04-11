@@ -1,10 +1,11 @@
 ##### COMMON
 alias l="ls -l"
 alias ll="clear && ls -lha"
+alias pstorm='pstorm .'
+alias zsource="source ~/.zshrc"
 
 ###### GIT
 alias gt="git status"
-alias gstaged="git diff --cached"
 alias gadded="git diff --cached"
 alias gstashlist="git stash list | cat"
 alias gb="git branch"
@@ -14,7 +15,6 @@ alias gpullmaster="git pull origin master"
 alias gdiff="git diff"
 alias gadd="git add -p"
 alias ga="git add"
-alias gck="git checkout"
 alias gpush="git push origin"
 alias gc="git commit -m "
 alias gpull="git pull origin"
@@ -51,7 +51,7 @@ alias artisan="php artisan"
 alias artisan-cc="php artisan optimize && php artisan clear-compiled"
 
 ###### PHPUnit
-alias p="phpunit"
+alias p="vendor/bin/phpunit"
 alias pf="p --filter "
 alias pls="p --testdox"
 alias pps="p --stop-on-failure"
@@ -61,3 +61,12 @@ alias d="docker "
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias dimg='docker images'
+
+###### DOCKER COMPOSE
+alias dcp="docker-compose up -d"
+alias dabort="docker kill $(docker ps -a -q | head -n 1)"
+
+
+###### DOCKER RUNNING
+alias dnode='docker run -it --rm -v $(pwd):/www -w /www node node'
+alias dphp5='docker run -it --rm -v $(pwd):/www -w /www php:5.6-alpine php'
