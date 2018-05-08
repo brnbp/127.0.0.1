@@ -4,6 +4,8 @@
 [core]
 	editor = vim
     excludesfile = /Users/brnbp/.gitignore_global
+[pull]
+    rebase = true
 [push]
 	default = matching
 [init]
