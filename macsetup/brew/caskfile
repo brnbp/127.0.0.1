@@ -8,8 +8,6 @@ sequel-pro
 visual-studio-code
 postman
 phpstorm
-docker
-robo-3t
 
 # System tools and tweaks
 the-unarchiver
@@ -22,6 +20,7 @@ itsycal
 slack
 spotify
 telegram-desktop
-whatsapp
 vlc
 transmission
+pocket-casts
+notion
