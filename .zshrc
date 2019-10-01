@@ -6,15 +6,17 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
-plugins=(git alias-tips bgnotify composer docker-compose docker extract)
+plugins=(git alias-tips bgnotify composer docker-compose docker extract laravel)
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.composer/vendor/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.composer/vendor/bin:$PATH:/usr/local:/usr/local/sbin:$HOME/.bin:$PATH"
+export PATH="$PATH:/usr/local/lib/python2.7/site-packages"
+export PATH="$PATH:$HOME/Library/Python/3.7/bin/"
 
-export PATH="/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.composer/vendor/bin:/usr/local:/usr/local/bin:/usr/local/sbin:$HOME/.bin:$(brew --prefix homebrew/php/php71)/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 
+export LOLCOMMITS_DELAY=2
 export LOLCOMMITS_FORK=true
 export LOLCOMMITS_STEALTH=true
 
@@ -29,7 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 
 prompt_context(){
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)𝝺 $USER"
+    prompt_segment black default "%(!.%{%F{yellow}%}.) 𝝺 $USER"
   fi
 }
 
